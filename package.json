@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@atlaskit/button": "^13.3.5",
+    "@percy/puppeteer": "^1.0.8",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -31,7 +32,8 @@
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "storybook-screenshot": "storycap --serverCmd \"yarn storybook -p 9009 --ci\" http://localhost:9009",
-    "screenshot-test": "jest -c jest.screenshot.config.js"
+    "screenshot-test": "jest -c jest.screenshot.config.js",
+    "screenshot-test-with-percy": "SCREENSHOT_MODE=percy percy exec -- jest -c jest.screenshot.config.js"
   },
   "eslintConfig": {
     "extends": "react-app"
