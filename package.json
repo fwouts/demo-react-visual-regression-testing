@@ -18,6 +18,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.1",
+    "storycap": "^2.3.4",
     "styled-components": "^5.0.0",
     "typescript": "~3.7.2"
   },
@@ -27,7 +28,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "storybook-screenshot": "storycap --serverCmd \"yarn storybook -p 9009 --ci\" http://localhost:9009"
   },
   "eslintConfig": {
     "extends": "react-app"
